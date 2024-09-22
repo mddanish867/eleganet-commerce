@@ -34,7 +34,7 @@ const Checkout = () => {
 
   }
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         <h1 className="text-2xl font-semibold mb-4 text-gray-700">Checkout</h1>
         <div className="flex flex-col lg:flex-row gap-8">
