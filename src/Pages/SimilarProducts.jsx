@@ -4,10 +4,10 @@ import ProductCard from './ProductCard';
 const SimilarProducts = ({ currentProductId, category }) => {
   // This would typically come from an API call
   const similarProducts = [
-    { id: 101, name: 'Similar Product 1', description: 'Description 1', price: 89.99, image: '/placeholder.svg?height=300&width=300', rating: 4.3 },
-    { id: 102, name: 'Similar Product 2', description: 'Description 2', price: 99.99, image: '/placeholder.svg?height=300&width=300', rating: 4.5 },
-    { id: 103, name: 'Similar Product 3', description: 'Description 3', price: 79.99, image: '/placeholder.svg?height=300&width=300', rating: 4.2 },
-    { id: 104, name: 'Similar Product 4', description: 'Description 4', price: 109.99, image: '/placeholder.svg?height=300&width=300', rating: 4.7 },
+    { id: 101, name: 'Similar Product 1', description: 'Description 1', price: 89.99, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg', rating: 4.3 },
+    { id: 102, name: 'Similar Product 2', description: 'Description 2', price: 99.99, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg', rating: 4.5 },
+    { id: 103, name: 'Similar Product 3', description: 'Description 3', price: 79.99, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg', rating: 4.2 },
+    { id: 104, name: 'Similar Product 4', description: 'Description 4', price: 109.99, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg', rating: 4.7 },
   ].filter(product => product.id !== currentProductId);
 
   return (

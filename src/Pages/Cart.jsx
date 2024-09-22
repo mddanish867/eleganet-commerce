@@ -4,9 +4,9 @@ import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react'
 
 const Cart = () => {
   const cartItems = [
-    { id: 1, name: 'Wireless Earbuds', price: 99.99, quantity: 2, image: '/placeholder.svg?height=80&width=80' },
-    { id: 2, name: 'Smart Watch', price: 199.99, quantity: 1, image: '/placeholder.svg?height=80&width=80' },
-    { id: 3, name: 'Bluetooth Speaker', price: 129.99, quantity: 1, image: '/placeholder.svg?height=80&width=80' },
+    { id: 1, name: 'Wireless Earbuds', price: 99.99, quantity: 2, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 2, name: 'Smart Watch', price: 199.99, quantity: 1, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 3, name: 'Bluetooth Speaker', price: 129.99, quantity: 1, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
   ]
 
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0)

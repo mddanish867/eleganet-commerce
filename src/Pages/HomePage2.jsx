@@ -4,10 +4,10 @@ import { ArrowRight, Star } from 'lucide-react'
 
 const HomePage2 = () => {
   const featuredProducts = [
-    { id: 1, name: 'Wireless Earbuds', price: 99.99, rating: 4.5, image: '/placeholder.svg?height=300&width=300' },
-    { id: 2, name: 'Smart Watch', price: 199.99, rating: 4.8, image: '/placeholder.svg?height=300&width=300' },
-    { id: 3, name: 'Laptop Backpack', price: 79.99, rating: 4.2, image: '/placeholder.svg?height=300&width=300' },
-    { id: 4, name: 'Bluetooth Speaker', price: 129.99, rating: 4.7, image: '/placeholder.svg?height=300&width=300' },
+    { id: 1, name: 'Wireless Earbuds', price: 99.99, rating: 4.5, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 2, name: 'Smart Watch', price: 199.99, rating: 4.8, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 3, name: 'Laptop Backpack', price: 79.99, rating: 4.2, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 4, name: 'Bluetooth Speaker', price: 129.99, rating: 4.7, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
   ]
 
   return (

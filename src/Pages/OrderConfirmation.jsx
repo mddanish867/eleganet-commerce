@@ -8,9 +8,9 @@ const OrderConfirmation = () => {
     orderDate: 'May 15, 2023',
     estimatedDelivery: 'May 20, 2023',
     items: [
-      { id: 1, name: 'Wireless Earbuds', price: 99.99, quantity: 2, image: '/placeholder.svg?height=80&width=80' },
-      { id: 2, name: 'Smart Watch', price: 199.99, quantity: 1, image: '/placeholder.svg?height=80&width=80' },
-      { id: 3, name: 'Bluetooth Speaker', price: 129.99, quantity: 1, image: '/placeholder.svg?height=80&width=80' },
+      { id: 1, name: 'Wireless Earbuds', price: 99.99, quantity: 2, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+      { id: 2, name: 'Smart Watch', price: 199.99, quantity: 1, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+      { id: 3, name: 'Bluetooth Speaker', price: 129.99, quantity: 1, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
     ],
     subtotal: 529.96,
     shipping: 10.00,

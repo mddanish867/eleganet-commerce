@@ -4,14 +4,14 @@ import { Star, Filter, X, Heart } from 'lucide-react'
 const ProductListing = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   const products = [
-    { id: 1, name: 'Wireless Earbuds', price: 99.99, rating: 4.5, image: '/placeholder.svg?height=300&width=300' },
-    { id: 2, name: 'Smart Watch', price: 199.99, rating: 4.8, image: '/placeholder.svg?height=300&width=300' },
-    { id: 3, name: 'Laptop Backpack', price: 79.99, rating: 4.2, image: '/placeholder.svg?height=300&width=300' },
-    { id: 4, name: 'Bluetooth Speaker', price: 129.99, rating: 4.7, image: '/placeholder.svg?height=300&width=300' },
-    { id: 5, name: 'Fitness Tracker', price: 89.99, rating: 4.4, image: '/placeholder.svg?height=300&width=300' },
-    { id: 6, name: 'Portable Charger', price: 49.99, rating: 4.6, image: '/placeholder.svg?height=300&width=300' },
-    { id: 7, name: 'Wireless Mouse', price: 39.99, rating: 4.3, image: '/placeholder.svg?height=300&width=300' },
-    { id: 8, name: 'Noise-Canceling Headphones', price: 249.99, rating: 4.9, image: '/placeholder.svg?height=300&width=300' },
+    { id: 1, name: 'Wireless Earbuds', price: 99.99, rating: 4.5, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 2, name: 'Smart Watch', price: 199.99, rating: 4.8, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 3, name: 'Laptop Backpack', price: 79.99, rating: 4.2, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 4, name: 'Bluetooth Speaker', price: 129.99, rating: 4.7, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 5, name: 'Fitness Tracker', price: 89.99, rating: 4.4, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 6, name: 'Portable Charger', price: 49.99, rating: 4.6, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 7, name: 'Wireless Mouse', price: 39.99, rating: 4.3, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
+    { id: 8, name: 'Noise-Canceling Headphones', price: 249.99, rating: 4.9, image: 'https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg' },
   ]
 
   return (

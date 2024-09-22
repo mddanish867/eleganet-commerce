@@ -15,7 +15,7 @@ const Navbar = ({ onSearchClick }) => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <img className="h-8 w-auto" src="/logo.svg" alt="Logo" />
+              <img className="h-8 w-auto" src="https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg" alt="Logo" />
             </Link>
           </div>
           <div className="hidden md:block">
