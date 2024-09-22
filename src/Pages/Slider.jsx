@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { id: 1, image: 'https://dummyimage.com/300x200/000/fff', title: 'Summer Collection', description: 'Discover our new summer styles' },
-    { id: 2, image: 'https://dummyimage.com/400x300/00ff00/000', title: 'New Arrivals', description: 'Check out our latest products' },
-    { id: 3, image: 'https://dummyimage.com/600x400/0000ff/fff', title: 'Special Offers', description: 'Limited time discounts on selected items' },
+    { id: 1, image: 'https://farm4.staticflickr.com/3224/3081748027_0ee3d59fea_z_d.jpg', title: 'Summer Collection', description: 'Discover our new summer styles' },
+    { id: 2, image: 'https://farm8.staticflickr.com/7377/9359257263_81b080a039_z_d.jpg', title: 'New Arrivals', description: 'Check out our latest products' },
+    { id: 3, image: 'https://farm9.staticflickr.com/8295/8007075227_dc958c1fe6_z_d.jpg', title: 'Special Offers', description: 'Limited time discounts on selected items' },
   ];
 
   useEffect(() => {

@@ -10,8 +10,10 @@ const Navbar = ({ onSearchClick }) => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const handleClickOutside = () => {
-    setIsMenuOpen(false)
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false)
+    }
   }
 
   useEffect(() => {
@@ -78,23 +80,58 @@ const Navbar = ({ onSearchClick }) => {
       {isMenuOpen && (
         <div ref={menuRef} className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
-            <Link to="/products" className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Products</Link>
-            <Link to="/about" className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">About</Link>
-            <Link to="/contact" className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+            <Link 
+              to="/" 
+              className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/productslist" 
+              className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Products
+            </Link>
+            <Link 
+              to="/about" 
+              className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/contact" 
+              className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center px-5">
               <button
-                onClick={onSearchClick}
+                onClick={() => {
+                  onSearchClick();
+                  setIsMenuOpen(false);
+                }}
                 className="p-1 rounded-full text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               >
                 <Search className="h-6 w-6" />
               </button>
-              <Link to="/login" className="ml-auto px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-200">
+              <Link 
+                to="/login" 
+                className="ml-auto px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Login
               </Link>
-              <Link to="/cart" className="ml-4 p-1 rounded-full text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+              <Link 
+                to="/cart" 
+                className="ml-4 p-1 rounded-full text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 <ShoppingCart className="h-6 w-6" />
               </Link>
             </div>
