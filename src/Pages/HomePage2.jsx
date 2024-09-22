@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star } from 'lucide-react'
 import FeaturedBrands from './FeaturedBrands'
+import Slider from './Slider'
 
 const HomePage2 = () => {
   const featuredProducts = [
@@ -26,6 +27,11 @@ const HomePage2 = () => {
         </div>
       </section>
 
+      {/* Slider*/}
+      <div className='mt-1 mb-1'>
+      <Slider/>
+
+      </div>
       {/* Featured Products Section */}
       <section className="py-16">
         <div className="px-4">
