@@ -21,7 +21,7 @@ const Navbar = ({ onSearchClick }) => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link to="/" className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-              <Link to="/products" className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Products</Link>
+              <Link to="/productslist" className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Products</Link>
               <Link to="/about" className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">About</Link>
               <Link to="/contact" className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
             </div>

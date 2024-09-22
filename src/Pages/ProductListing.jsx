@@ -99,7 +99,7 @@ const ProductListing = () => {
                 <div key={product.id} className="bg-white rounded-lg overflow-hidden transition duration-300 hover:shadow-md">
                   <div className="relative">
                     <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
-                    <button className="absolute top-2 right-2 p-1 rounded-full bg-white text-gray-600 hover:text-red-500 transition duration-300">
+                    <button className="absolute top-2 right-2 p-1 rounded-full bg-transparent text-gray-600 hover:text-gray-700 transition duration-300">
                       <Heart className="w-5 h-5" />
                     </button>
                   </div>

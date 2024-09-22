@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star } from 'lucide-react'
+import FeaturedBrands from './FeaturedBrands'
 
 const HomePage2 = () => {
   const featuredProducts = [
@@ -11,10 +12,10 @@ const HomePage2 = () => {
   ]
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="container mx-auto px-4 py-20 md:py-32">
+        <div className="px-4 py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Our E-commerce Store</h1>
             <p className="text-xl md:text-2xl mb-8">Discover amazing products at unbeatable prices!</p>
@@ -27,7 +28,7 @@ const HomePage2 = () => {
 
       {/* Featured Products Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Featured Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProducts.map((product) => (
@@ -57,8 +58,10 @@ const HomePage2 = () => {
         </div>
       </section>
 
+      <FeaturedBrands/>
+
       {/* Categories Section */}
-      <section className="bg-gray-200 py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Shop by Category</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

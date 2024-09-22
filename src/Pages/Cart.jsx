@@ -14,7 +14,7 @@ const Cart = () => {
   const total = subtotal + shipping
 
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         <h1 className="text-2xl font-semibold mb-4 text-gray-700">Your Cart</h1>
         {cartItems.length === 0 ? (
