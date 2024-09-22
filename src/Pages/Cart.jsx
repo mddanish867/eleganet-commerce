@@ -1,74 +1,110 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react'
 
+const Cart = () => {
+  const cartItems = [
+    { id: 1, name: 'Wireless Earbuds', price: 99.99, quantity: 2, image: '/placeholder.svg?height=80&width=80' },
+    { id: 2, name: 'Smart Watch', price: 199.99, quantity: 1, image: '/placeholder.svg?height=80&width=80' },
+    { id: 3, name: 'Bluetooth Speaker', price: 129.99, quantity: 1, image: '/placeholder.svg?height=80&width=80' },
+  ]
 
-const Cart = ({ cartItems = [], updateQuantity, removeItem }) => {
-  // Ensure cartItems is an array by default
-  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0)
+  const shipping = 10
+  const total = subtotal + shipping
 
   return (
-    <div class="bg-white p-6">
-    <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-6">Cart</h1>
-
-        <div class="bg-white shadow-sm rounded-lg overflow-x-auto">
-            <table class="min-w-full w-full">
-                <thead>
-                    <tr class="bg-slate-100 text-left text-sm uppercase font-semibold text-gray-600">
-                        <th class="px-6 py-4">Product</th>
-                        <th class="px-6 py-4">Price</th>
-                        <th class="px-6 py-4">Quantity</th>
-                        <th class="px-6 py-4">Subtotal</th>
-                        <th class="px-6 py-4"></th>
+    <div className="bg-gray-50 min-h-screen py-8">
+      <div className="container mx-auto px-4">
+        <h1 className="text-2xl font-semibold mb-4 text-gray-700">Your Cart</h1>
+        {cartItems.length === 0 ? (
+          <div className="bg-white rounded-lg shadow-sm p-6 text-center">
+            <ShoppingBag className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h2 className="text-xl font-semibold mb-2 text-gray-700">Your cart is empty</h2>
+            <p className="text-gray-500 mb-4">Looks like you haven't added anything to your cart yet.</p>
+            <Link to="/products" className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">
+              Start Shopping
+            </Link>
+          </div>
+        ) : (
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="md:w-3/4">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b">
-                        <td class="px-6 py-4 flex items-center space-x-4">
-                            <img src="https://via.placeholder.com/50" alt="Product Image" class="w-12 h-12 rounded"/>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {cartItems.map((item) => (
+                      <tr key={item.id}>
+                        <td className="py-4 px-4">
+                          <div className="flex items-center">
+                            <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded" />
+                            <div className="ml-4">
+                              <div className="text-sm font-medium text-gray-900">{item.name}</div>
+                            </div>
+                          </div>
                         </td>
-                        <td class="px-6 py-4">$13.25</td>
-                        <td class="px-6 py-4">
-                            <input type="number" value="1" class="w-16 p-1 border rounded text-center focus:outline-none"/>
+                        <td className="py-4 px-4">
+                          <div className="flex items-center">
+                            <button className="text-gray-500 hover:text-gray-700">
+                              <Minus className="w-4 h-4" />
+                            </button>
+                            <span className="mx-2 text-gray-700">{item.quantity}</span>
+                            <button className="text-gray-500 hover:text-gray-700">
+                              <Plus className="w-4 h-4" />
+                            </button>
+                          </div>
                         </td>
-                        <td class="px-6 py-4">$13.25</td>
-                        <td class="px-6 py-4">
-                            <button class="text-red-500 hover:text-red-700 focus:outline-none">×</button>
+                        <td className="py-4 px-4 text-sm text-gray-700">${item.price.toFixed(2)}</td>
+                        <td className="py-4 px-4 text-sm text-gray-700">${(item.price * item.quantity).toFixed(2)}</td>
+                        <td className="py-4 px-4">
+                          <button className="text-red-500 hover:text-red-700">
+                            <Trash2 className="w-5 h-5" />
+                          </button>
                         </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-/        <div class="mt-6 flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0">
-            <div class="flex items-center space-x-4">
-                <input type="text" placeholder="Coupon code" class="border rounded p-2 w-full sm:w-64 focus:outline-none"/>
-                <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 focus:outline-none">
-                    Apply Coupon
-                </button>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 focus:outline-none">
-                Update Cart
-            </button>
-        </div>
-
-/        <div class="mt-6 bg-white shadow-md rounded-lg p-6 w-full sm:w-1/3 ml-auto">
-            <h2 class="text-xl font-bold mb-4">Cart totals</h2>
-            <div class="flex justify-between border-b py-2">
-                <span>Subtotal</span>
-                <span>$13.25</span>
+            <div className="md:w-1/4">
+              <div className="bg-white rounded-lg shadow-sm p-6">
+                <h2 className="text-lg font-semibold mb-4 text-gray-700">Order Summary</h2>
+                <div className="flex justify-between mb-2">
+                  <span className="text-gray-600">Subtotal</span>
+                  <span className="text-gray-800">${subtotal.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between mb-2">
+                  <span className="text-gray-600">Shipping</span>
+                  <span className="text-gray-800">${shipping.toFixed(2)}</span>
+                </div>
+                <div className="border-t pt-2 mt-2">
+                  <div className="flex justify-between mb-2">
+                    <span className="font-semibold text-gray-700">Total</span>
+                    <span className="font-semibold text-gray-800">${total.toFixed(2)}</span>
+                  </div>
+                </div>
+                <Link
+                  to="/checkout"
+                  className="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 inline-block text-center"
+                >
+                  Proceed to Checkout
+                </Link>
+              </div>
             </div>
-            <div class="flex justify-between border-b py-2">
-                <span>Total</span>
-                <span>$13.25</span>
-            </div>
-            <button class="bg-green-700 text-white w-full mt-4 py-2 rounded hover:bg-green-800 focus:outline-none">
-                Proceed To Checkout
-            </button>
-        </div>
+          </div>
+        )}
+      </div>
     </div>
-</div>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart
