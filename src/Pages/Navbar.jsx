@@ -1,13 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, Search, ShoppingCart, User } from 'lucide-react'
+import { Menu, X, Search, ShoppingCart } from 'lucide-react'
 
 const Navbar = ({ onSearchClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef(null)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMenuOpen])
 
   return (
     <nav className="bg-white shadow-md">
@@ -59,7 +78,7 @@ const Navbar = ({ onSearchClick }) => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div ref={menuRef} className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/" className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
             <Link to="/products" className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Products</Link>
