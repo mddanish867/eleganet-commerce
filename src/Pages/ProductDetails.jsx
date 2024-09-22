@@ -48,7 +48,7 @@ const ProductDetails = () => {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row -mx-4">
           {/* Image Gallery */}
@@ -61,8 +61,8 @@ const ProductDetails = () => {
                   className="w-full h-auto rounded-lg shadow-md"
                 />
                 <div className="absolute top-4 right-4">
-                  <button className="p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition duration-300">
-                    <Heart className="w-6 h-6 text-red-500" />
+                  <button className="p-2 bg-transparent rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                    <Heart className="w-6 h-6 text-gray-900" />
                   </button>
                 </div>
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
@@ -122,7 +122,7 @@ const ProductDetails = () => {
 
             {/* Size Selection */}
             <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-400 mb-2">Size</h3>
+              <h3 className="text-sm font-medium text-gray-900 mb-2">Size</h3>
               <div className="flex space-x-2">
                 {product.sizes.map((size) => (
                   <button

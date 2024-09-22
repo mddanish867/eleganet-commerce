@@ -15,9 +15,8 @@ const ProductListing = () => {
   ]
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-gray-800">Our Products</h1>
         <div className="flex flex-col md:flex-row gap-8">
           {/* Filter Sidebar */}
           <div className={`md:w-1/4 bg-white p-6 rounded-lg shadow-sm ${isFilterOpen ? 'fixed inset-0 z-50 overflow-auto' : 'hidden md:block'}`}>

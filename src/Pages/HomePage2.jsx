@@ -19,7 +19,7 @@ const HomePage2 = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Our E-commerce Store</h1>
             <p className="text-xl md:text-2xl mb-8">Discover amazing products at unbeatable prices!</p>
-            <Link to="/products" className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition duration-300">
+            <Link to="/productslist" className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition duration-300">
               Shop Now
             </Link>
           </div>
