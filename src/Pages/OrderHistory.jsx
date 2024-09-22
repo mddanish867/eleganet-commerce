@@ -56,7 +56,7 @@ const OrderHistory = () => {
         <h1 className="text-2xl font-semibold mb-6 text-gray-800">Order History</h1>
         <div className="space-y-6">
           {orders.map((order) => (
-            <div key={order.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div key={order.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="p-6">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
                   <div>

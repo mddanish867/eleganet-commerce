@@ -12,7 +12,12 @@ import Checkout from './Pages/Checkout'
 import OrderConfirmation from './Pages/OrderConfirmation'
 import OrderHistory from './Pages/OrderHistory'
 import ProductDetails from './Pages/ProductDetails'
-import Login from './Pages/Login'
+import Login from './Pages/Auth/Login'
+import Register from './Pages/Auth/Register'
+import ForgotPassword from './Pages/Auth/ForgotPassword'
+import ResetPassword from './Pages/Auth/ResetPassword'
+import MobileLogin from './Pages/Auth/MobileLogin'
+import OTPVerification from './Pages/Auth/OTPVerification'
 
 export default function App() {
   return (
@@ -31,6 +36,11 @@ export default function App() {
           <Route path="/filters" element={<ProductFilter/>} />
           <Route path="/search" element={<SearchDrawer/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
+          <Route path="/forgot-password" element={<ForgotPassword/>} />
+          <Route path="/reset-password" element={<ResetPassword/>} />
+          <Route path="/mobile-login" element={<MobileLogin/>} />
+          <Route path="/otp-verification" element={<OTPVerification/>} />
 
 
         </Routes>
