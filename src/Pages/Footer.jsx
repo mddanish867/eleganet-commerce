@@ -29,6 +29,30 @@ const Footer = () => {
             </ul>
           </div>
           <div>
+            <h3 className="text-lg font-bold mb-4">Modern Templates</h3>
+            <ul>
+              <li><Link to="/adventureoutdoor" target='_blank'>Adventure Outdoor</Link></li>
+              <li><Link to="/artistnalfood" target='_blank'>Artistnal food</Link></li>
+              <li><Link to="/artistnalhevean" target='_blank'>Artstnal Hevean</Link></li>
+              <li><Link to="/ecoheaven" target='_blank'>Eco Hevean</Link></li>
+              <li><Link to="/ecohome" target='_blank'>Eco Home</Link></li>
+              <li><Link to="/fashionista" target='_blank'>Fashionista</Link></li>
+              <li><Link to="/techzone" target='_blank'>Tech Zone</Link></li>
+
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold mb-4">Manimal Templates</h3>
+            <ul>
+              <li><Link to="/luxbotique" target='_blank'>Lux Botique</Link></li>
+              <li><Link to="/luxgem" target='_blank'>Lux Gem</Link></li>
+              <li><Link to="/luxgems" target='_blank'>Lux Gems</Link></li>
+              <li><Link to="/manimalshop" target='_blank'>Manimal Shop</Link></li>
+              <li><Link to="/retrochic" target='_blank'>Retro Chic</Link></li>
+              <li><Link to="/technova" target='_blank'>Tech Nova</Link></li>
+            </ul>
+          </div>
+          <div>
             <h3 className="text-lg font-bold mb-4">Newsletter</h3>
             <p>Subscribe to our newsletter for updates</p>
             <form className="mt-4">
@@ -44,7 +68,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+          <p>&copy; `{Date.now()}` Your Company Name. All rights reserved.</p>
         </div>
       </div>
     </footer>
