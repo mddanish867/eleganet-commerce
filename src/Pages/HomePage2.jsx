@@ -15,7 +15,7 @@ const HomePage2 = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-     {/* <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="px-4 py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Our E-commerce Store</h1>
@@ -25,11 +25,11 @@ const HomePage2 = () => {
             </Link>
           </div>
         </div>
-      </section>*/}
+      </section>
 
       {/* Slider*/}
       <div className='mt-1 mb-1'>
-      <Slider/>
+     {/* <Slider/>*/}
 
       </div>
       {/* Featured Products Section */}
